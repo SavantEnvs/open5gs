@@ -1,0 +1,9 @@
+project: savantenvs/open5gs
+target: sbi_multipart_fuzz-mined-d2707b0
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/sbi_multipart_fuzz-mined-d2707b0/testsuite
+cmds:
+  - cmd: /mayhem/sbi_multipart_fuzz
+    libfuzzer: true
+    cwd: /dev/shm
